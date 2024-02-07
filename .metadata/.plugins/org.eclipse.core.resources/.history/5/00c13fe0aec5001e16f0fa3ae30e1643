@@ -21,22 +21,6 @@ public class Principal {
 			System.out.println("x == 5");
 		}
 		
-		//case
-		int z = 2;
-		switch(z) {
-			case 1: System.out.println("z == 1"); break;
-			case 2:
-			case 3:
-				System.out.println("z == 2 ou z == 3");
-				break;
-			case 10:
-				System.out.println("z == 10");
-				break;
-			default:
-				System.out.println("default");
-				break;
-		}
-		
 	}
 
 }

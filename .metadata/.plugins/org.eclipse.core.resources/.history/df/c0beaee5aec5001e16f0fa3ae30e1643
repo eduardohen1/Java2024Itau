@@ -22,7 +22,7 @@ public class Principal {
 		}
 		
 		//case
-		int z = 2;
+		int z = 10;
 		switch(z) {
 			case 1: System.out.println("z == 1"); break;
 			case 2:
