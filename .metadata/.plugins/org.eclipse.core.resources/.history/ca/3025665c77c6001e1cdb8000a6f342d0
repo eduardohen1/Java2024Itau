@@ -1,0 +1,26 @@
+package br.com.eduardohmf.poo;
+
+public class Aluno extends Pessoa {
+
+	private String matricula;
+	private String dtMatricula;
+	
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	public String getDtMatricula() {
+		return dtMatricula;
+	}
+	public void setDtMatricula(String dtMatricula) {
+		this.dtMatricula = dtMatricula;
+	}
+	
+	@Override
+	public String toString() {
+		return "Matricula = " + this.matricula + "\nDt Matricula = " + this.dtMatricula;
+	}
+	
+}

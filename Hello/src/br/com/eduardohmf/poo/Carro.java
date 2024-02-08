@@ -15,13 +15,47 @@ public class Carro {
 		System.out.println("Carro parado");
 	}
 	
-	//GETs e SETs
-	public String getCor() {
-		return this.cor;
+	//construtor
+	public Carro(String cor, String marca, String modelo) {
+		this.cor = cor;
+		this.marca = marca;
+		this.modelo = modelo;
 	}
 	
+	// todo carro será da cor branca
+	public Carro(String marca, String modelo) {
+		this.cor = "BRANCA";
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+	
+	//GETs e SETs
+	public String getCor() {
+		return cor;
+	}
+
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}	
 	
+	@Override
+	public String toString() {		
+		return "Cor = " + cor + "\nMarca = " + marca + "\nModelo = " + modelo;
+	}
 }
