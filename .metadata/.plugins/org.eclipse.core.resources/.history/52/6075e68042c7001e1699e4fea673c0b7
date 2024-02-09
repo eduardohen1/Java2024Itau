@@ -1,0 +1,5 @@
+package br.com.eduardohmf.exception;
+
+public class LimiteCreditoExcedidoException {
+
+}
