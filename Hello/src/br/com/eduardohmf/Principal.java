@@ -2,14 +2,24 @@ package br.com.eduardohmf;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import br.com.eduardohmf.conta.ContaBancaria;
 import br.com.eduardohmf.exception.LimiteCreditoExcedidoException;
+import br.com.eduardohmf.model.Pessoa;
 import br.com.eduardohmf.poo.Aluno;
 import br.com.eduardohmf.poo.Carro;
 
 public class Principal {
-
+	
 	public static void lerArquivo(String nome) throws FileNotFoundException {
 		FileInputStream file = new FileInputStream(nome);
 	}
@@ -17,6 +27,114 @@ public class Principal {
 	public static void main(String[] args) {
 		System.out.println("Bom dia turma!!!");
 		
+		List<String> nomes = new ArrayList<>();
+		
+		//adicionar os nomes à lista:
+		nomes.add("Tiao"); //0
+		nomes.add("Jao"); //1
+		nomes.add("Ana"); //2
+		
+		//imprimir a lista for-each
+		for(String nome : nomes) {
+			System.out.println("- " + nome);
+		}
+		
+		nomes.add("Fulano"); //3
+		nomes.remove(2);
+		
+		//imprimir a lista for-each
+		for(String nome : nomes) {
+			System.out.println("- " + nome);
+		}
+		
+		System.out.println(nomes.get(0)); //buscar elemento por indice
+		
+		if(!nomes.contains("Ana"))
+			nomes.add("Ana");
+		else
+			nomes.add("Maria");
+		System.out.println("----------------------------------");
+		//imprimir a lista for-each
+		for(String nome : nomes) {
+			System.out.println("- " + nome);
+		}
+		System.out.println("----------------------------------");
+		//Loop por Iterator
+		Iterator<String> it = nomes.iterator();
+		while(it.hasNext()) {
+			String nome1 = it.next();
+			System.out.println("* " + nome1);
+		}
+		
+		System.out.println("----------------------------------");
+		//ordenar a lista
+		Collections.sort(nomes);
+		it = nomes.iterator();
+		while(it.hasNext()) {
+			String nome1 = it.next();
+			System.out.println("* " + nome1);
+		}
+		
+		System.out.println("----------------------------------");
+		Pessoa p1 = new Pessoa(1, "Ana", "email1");
+		Pessoa p2 = new Pessoa(2, "Maria", "email2");
+		Pessoa p3 = new Pessoa(3, "Jose", "email3");
+		Pessoa p4 = new Pessoa(4, "Tiao", "email4");
+		Pessoa p5 = new Pessoa(4, "Ana Maria", "email5");
+
+		List<Pessoa> pessoas = new ArrayList<>();
+		pessoas.add(p1);
+		pessoas.add(p2);
+		pessoas.add(p3);
+		pessoas.add(p4);
+		for(Pessoa pessoa : pessoas) {
+			System.out.println("- " + pessoa.toString());
+		}
+		System.out.println("----------------------------------");
+		List<Pessoa> nomesFiltrados = pessoas.stream()
+				.filter(pessoa -> "Ana".equals(pessoa.getNome()))
+				.collect(Collectors.toList());
+		
+		nomesFiltrados.forEach(System.out::println);
+		
+		System.out.println("----------------------------------");
+		Set<String> alunos = new HashSet<String>();
+		alunos.add("Ana");
+		alunos.add("Tiao");
+		alunos.add("Jose");
+		alunos.add("Ana"); //esse não vai ser inserido.
+		alunos.forEach(System.out::println);
+		
+		
+		//Criar uma lista de países e suas capitais:
+		System.out.println("----------------------------------");
+		Map<String, String> paises = new HashMap<>();
+		paises.put("BRASIL", "Brasilia");
+		paises.put("PORTUGAL", "Lisboa");
+		paises.put("FRANCA", "Paris");
+		paises.put("ARGENTINA", "Buenos Aires");
+		
+		//iteração:
+		for(Map.Entry<String, String> entry : paises.entrySet()) {
+			System.out.println("# " + entry.getKey() + " | " + entry.getValue());
+		}
+		
+		//pesquisar capital por país
+		System.out.println("----------------------------------");
+		System.out.println(paises.get("FRANCA"));
+		paises.put("CHINA", "Pequim");
+		
+		if(paises.containsKey("CHINA"))
+			System.out.println(paises.get("CHINA"));
+		else
+			System.out.println("Nao tem paIs CHINA!");
+		
+		System.out.println("----------------------------------");
+		for(String pais : paises.keySet()) {
+			System.out.println("& " + pais + " | " + paises.get(pais));
+		}
+		
+		/*
 		try {
 			int divisao = 10 / 0;
 		} catch (ArithmeticException e) {
@@ -59,7 +177,7 @@ public class Principal {
 			System.out.println(e.getMessage());
 			System.out.println("Quantia excedida: " + e.getQuantiaExcedida());
 		}
-		
+		*/
 		/*
 		boolean condicao = true;
 		if(!condicao) {

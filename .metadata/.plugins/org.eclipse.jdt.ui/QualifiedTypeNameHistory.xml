@@ -4,4 +4,11 @@
     <fullyQualifiedTypeName name="br.com.eduardohmf.poo.Carro"/>
     <fullyQualifiedTypeName name="br.com.eduardohmf.poo.Pessoa"/>
     <fullyQualifiedTypeName name="br.com.eduardohmf.poo.Aluno"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="br.com.eduardohmf.conta.ContaBancaria"/>
+    <fullyQualifiedTypeName name="br.com.eduardohmf.exception.LimiteCreditoExcedidoException"/>
 </qualifiedTypeNameHistroy>
