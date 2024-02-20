@@ -19,7 +19,7 @@
 						<option th:each="operacao: ${modelOperacoes}"
 						        th:value="${operacao}"
 						        th:text="${operacao}"
-						        th:selected="{$operacao == selectedModel}">
+						        th:selected="{$operacao == selectedModel}"> <!--  Erro aqui!!! -->
 						</option>				
 					</select>
 				</div>

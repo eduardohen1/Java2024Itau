@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class WebController {
 
-	@GetMapping("/index")
+	@GetMapping("/")
 	public String showForm(Model model) {
 		model.addAttribute("modelOperacoes",List.of("Soma","Subtracao"));
-		return "form";
+		return "index";
 	}
 	
-	@PostMapping("/index")
+	@PostMapping("/")
 	public String handleFormSubmission(@RequestParam String modelOperacoes,
 									   @RequestParam String valor01,
 									   @RequestParam String valor02,
@@ -25,10 +25,9 @@ public class WebController {
 		
 		if(modelOperacoes.isEmpty() || valor01.isEmpty() || valor02.isEmpty()) {
 			model.addAttribute("response","Existem campos em branco!");
-			return "form";
+			return "index";
 		}
-			
-		
+					
 		String resposta = "";
 		int res = 0;
 		switch(modelOperacoes) {
@@ -43,7 +42,7 @@ public class WebController {
 		resposta = String.valueOf(res); //converte de Inteiro -> String
 		model.addAttribute("modelOperacoes",List.of("Soma","Subtracao"));
 		model.addAttribute("response",resposta);
-		return "form";
+		return "index";
 	}
 	
 }
