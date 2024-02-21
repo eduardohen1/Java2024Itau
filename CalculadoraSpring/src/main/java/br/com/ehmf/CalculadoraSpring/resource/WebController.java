@@ -57,6 +57,11 @@ public class WebController {
 		return "index";
 	}
 	
+	@RequestMapping("/limpar")
+	public String limparResposta(Model model) {
+		return "redirect:/"; //redirecionar para a raiz/home/rota principal
+	}
+	
 	
 	
 }
