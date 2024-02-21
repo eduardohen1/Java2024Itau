@@ -19,7 +19,7 @@
 						<option th:each="operacao: ${modelOperacoes}"
 						        th:value="${operacao}"
 						        th:text="${operacao}"
-						        th:selected="{$operacao == selectedModel}"> <!--  Erro aqui!!! -->
+						        th:selected="${operacao == selectedModel}">
 						</option>				
 					</select>
 				</div>
@@ -41,7 +41,7 @@
 			
 			<div th:if="${response != null}" id="responseDiv">
 				<h4>Resposta:</h4>
-				<span th:text="${response}"></span>
+				<span th:text="${response}"></span>								
 			</div>
 			
 		</div>
