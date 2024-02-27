@@ -30,8 +30,8 @@ INDEX VERSION 1.134+C:\dev\Desenvolvimento\INDRA\Java2024Itau\.metadata\.plugins
 4028946073.index
 3953396507.index
 1737046162.index
-4070124729.index
 2521667001.index
+4070124729.index
 3726542409.index
 3790500209.index
 1315050375.index
@@ -44,7 +44,6 @@ INDEX VERSION 1.134+C:\dev\Desenvolvimento\INDRA\Java2024Itau\.metadata\.plugins
 1483472693.index
 2139921070.index
 3752186485.index
-3426338954.index
 1521052951.index
 3487220246.index
 3087164172.index

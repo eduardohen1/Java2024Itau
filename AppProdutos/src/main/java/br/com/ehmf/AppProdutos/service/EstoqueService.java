@@ -24,8 +24,7 @@ public class EstoqueService implements EstoqueServiceInterface {
 	public EstoqueService(EstoqueRepository estoqueRepository) {
 		this.estoqueRepository = estoqueRepository;
 	}
-	
-	
+		
 	@Override
 	public Estoque save(Estoque estoque) {
 		
@@ -72,4 +71,65 @@ public class EstoqueService implements EstoqueServiceInterface {
 		estoqueRepository.deleteById(id);
 	}
 
+	@Override
+	public Estoque addQuantidade(Produto produto, int quantidade) {
+		//encontrar o id do produto 
+		Optional<Produto> findProduto = produtoRepository.findById(produto.getId());
+		if(findProduto.isPresent()) {
+			//encontrar o estoque
+			Optional<Estoque> findEstoque = estoqueRepository.findByProduto(findProduto);
+			if(findEstoque.isPresent()) {				
+				//atualizar o campo quantidade
+				Estoque updateEstoque = findEstoque.get(); //setId
+				updateEstoque.setProduto(findEstoque.get().getProduto()); //evitar de atualizar o produto no estoque				
+				//adiciono a qte que será acrescida no meu bd
+				int qteAtualizar = findEstoque.get().getQuantidade() + quantidade;				
+				updateEstoque.setQuantidade(qteAtualizar);
+				//gravar
+				return estoqueRepository.save(updateEstoque);
+			}else {
+				return null;
+			}
+		}else {
+			return null;
+		}
+	}
+
+	@Override
+	public Estoque delQuantidade(Produto produto, int quantidade) {
+		//encontrar o id do produto 
+		Optional<Produto> findProduto = produtoRepository.findById(produto.getId());
+		if(findProduto.isPresent()) {
+			//encontrar o estoque
+			Optional<Estoque> findEstoque = estoqueRepository.findByProduto(findProduto);
+			if(findEstoque.isPresent()) {				
+				//atualizar o campo quantidade
+				Estoque updateEstoque = findEstoque.get(); //setId
+				updateEstoque.setProduto(findEstoque.get().getProduto()); //evitar de atualizar o produto no estoque				
+				//adiciono a qte que será acrescida no meu bd
+				int qteAtualizar = findEstoque.get().getQuantidade() - quantidade;
+				if(qteAtualizar < 0) {
+					System.out.println("Estoque negativo.");
+					return null;
+				}else {
+					updateEstoque.setQuantidade(qteAtualizar);
+					//gravar
+					return estoqueRepository.save(updateEstoque);
+				}
+			}else {
+				return null;
+			}
+		}else {
+			return null;
+		}
+	}
+
+	@Override
+	public List<Estoque> findEstoqueQuantidade(Integer quantidade) {
+		List<Estoque> listEstoque = estoqueRepository.findEstoqueQuantidadeLessThan(quantidade);
+		if(listEstoque.size() > 0) {
+			return listEstoque;
+		}
+		return null;
+	}
 }

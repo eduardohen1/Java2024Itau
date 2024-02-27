@@ -12,4 +12,6 @@
 		<item key="SashWeightTree" value="500"/>
 		<item key="SashWeightDetails" value="500"/>
 	</section>
+	<section name="conditionHistory">
+	</section>
 </section>

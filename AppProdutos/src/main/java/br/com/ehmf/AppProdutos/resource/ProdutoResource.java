@@ -20,7 +20,7 @@ import br.com.ehmf.AppProdutos.model.Produto;
 import br.com.ehmf.AppProdutos.service.ProdutoService;
 
 @RestController
-@RequestMapping("/api/produtos") //http://localhost:8080/api/produtos
+@RequestMapping("/api/produtos") //http://localhost:8081/api/produtos
 public class ProdutoResource {
 
 	private ProdutoService produtoService;
