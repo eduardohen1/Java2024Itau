@@ -1,11 +1,13 @@
 package br.com.ehmf.AppProdutos.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.ehmf.AppProdutos.dto.ProdutoDTO;
 import br.com.ehmf.AppProdutos.model.Produto;
 import br.com.ehmf.AppProdutos.repository.ProdutoRepository;
 import br.com.ehmf.AppProdutos.service.interfaces.ProdutoServiceInterface;
@@ -55,4 +57,11 @@ public class ProdutoService implements ProdutoServiceInterface {
 		produtoRepository.deleteById(id);		
 	}
 	
+	@Override
+	public List<ProdutoDTO> findProdutosAndQuantidade() {
+		List<ProdutoDTO> listProdutoDTO = produtoRepository.findProdutosAndQuantidade();
+		if(listProdutoDTO.size() > 0)
+			return listProdutoDTO;
+		return null;
+	}
 }

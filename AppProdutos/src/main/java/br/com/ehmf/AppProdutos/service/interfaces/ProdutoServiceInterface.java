@@ -3,6 +3,7 @@ package br.com.ehmf.AppProdutos.service.interfaces;
 import java.util.List;
 import java.util.Optional;
 
+import br.com.ehmf.AppProdutos.dto.ProdutoDTO;
 import br.com.ehmf.AppProdutos.model.Produto;
 
 public interface ProdutoServiceInterface {
@@ -17,5 +18,5 @@ public interface ProdutoServiceInterface {
 	Produto update(Produto produto);
 	//Deletar o produto
 	void delete(Long id);
-	
+	List<ProdutoDTO> findProdutosAndQuantidade();
 }
