@@ -16,5 +16,6 @@ public interface EstoqueServiceInterface {
 	Estoque addQuantidade(Produto produto, int quantidade);
 	Estoque delQuantidade(Produto produto, int quantidade);
 	List<Estoque> findEstoqueQuantidade(Integer quantidade);
+	List<Estoque> findEstoqueQuantidadeGreaterThan(Integer quantidade);
 	
 }

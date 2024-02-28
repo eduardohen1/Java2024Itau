@@ -93,5 +93,14 @@ public class EstoqueResource {
 			return ResponseEntity.notFound().build();
 		return ResponseEntity.ok(listEstoque);
 	}
+	
+	@GetMapping("/findEstoqueMaiorQue/{qte}")
+	public ResponseEntity<List<Estoque>> 
+		findEstoqueQuantidadeGreaterThan(@PathVariable Integer qte){
+		List<Estoque> listEstoque = estoqueService.findEstoqueQuantidadeGreaterThan(qte);
+		if(listEstoque == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(listEstoque);
+	}
 
 }
