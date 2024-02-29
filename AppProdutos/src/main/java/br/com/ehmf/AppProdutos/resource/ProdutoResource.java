@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ehmf.AppProdutos.dto.ProdutoDTO;
+import br.com.ehmf.AppProdutos.dto.ProdutoSimplesDTO;
 import br.com.ehmf.AppProdutos.model.Produto;
 import br.com.ehmf.AppProdutos.service.ProdutoService;
 
@@ -77,6 +78,15 @@ public class ProdutoResource {
 		if(listProdutoDTO == null)
 			return ResponseEntity.notFound().build();
 		return ResponseEntity.ok(listProdutoDTO);
+	}
+	
+	@GetMapping("/findProdutoSimplesAndQuantidade")
+	public ResponseEntity<List<ProdutoSimplesDTO>> findProdutoSimplesAndQuantidade(){
+		List<ProdutoSimplesDTO> listProdutoSimplesDTO = 
+				produtoService.findProdutoSimplesAndQuantidade();
+		if(listProdutoSimplesDTO == null)
+			return ResponseEntity.notFound().build();
+		return ResponseEntity.ok(listProdutoSimplesDTO);
 	}
 	
 }
