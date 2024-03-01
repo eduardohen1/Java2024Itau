@@ -20,6 +20,7 @@ import br.com.ehmf.AppProdutos.dto.ProdutoDTO;
 import br.com.ehmf.AppProdutos.dto.ProdutoSimplesDTO;
 import br.com.ehmf.AppProdutos.model.Produto;
 import br.com.ehmf.AppProdutos.service.ProdutoService;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/api/produtos") //http://localhost:8081/api/produtos
@@ -32,6 +33,7 @@ public class ProdutoResource {
 		this.produtoService = produtoService;		
 	}
 	
+	@Operation(summary = "Busca registros de produtos cadastrados")
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAllProdutos(){
 		List<Produto> produtos = produtoService.getAll();

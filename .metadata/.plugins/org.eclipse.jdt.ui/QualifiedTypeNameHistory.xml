@@ -38,11 +38,12 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
-    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="jakarta.persistence.PersistenceContext"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="br.com.ehmf.AppProdutos.dto.ProdutoDTO"/>
     <fullyQualifiedTypeName name="br.com.ehmf.AppProdutos.service.ProdutoService"/>
+    <fullyQualifiedTypeName name="br.com.ehmf.AppProdutos.dto.ProdutoDTO"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="br.com.ehmf.AppProdutos.dto.ProdutoSimplesDTO"/>
 </qualifiedTypeNameHistroy>
