@@ -3,13 +3,18 @@ package br.com.ehmf.AppProdutos.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-	
-	public ResponseEntity<?> handlerResourceNotFoundException(
+
+	@ExceptionHandler(ResourceNotFoundException.class)
+	public ResponseEntity<Erro> handlerResourceNotFoundException(
 			ResourceNotFoundException e){
-		return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+		
+		Erro erro = new Erro(e.getMessage(), "APPPRODUTOS");
+		
+		return new ResponseEntity<>(erro, HttpStatus.NOT_FOUND);
 	}
 	
 }

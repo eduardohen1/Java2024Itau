@@ -73,7 +73,8 @@ public class EstoqueService implements EstoqueServiceInterface {
 	}
 
 	@Override
-	public Estoque addQuantidade(Produto produto, int quantidade) {
+	public Estoque addQuantidade(Produto produto, int quantidade) 
+			throws ResourceNotFoundException {
 		//encontrar o id do produto 
 		Optional<Produto> findProduto = produtoRepository.findById(produto.getId());
 		if(findProduto.isPresent()) {
