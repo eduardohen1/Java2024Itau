@@ -75,16 +75,6 @@ Para rodar qualquer uma das aplicações, siga os passos abaixo:
 
 ---
 
-### 👨‍💻 Contribuição
-
-Contribuições são sempre bem-vindas! Para contribuir, por favor, crie um fork do repositório, faça suas alterações e submeta um Pull Request.
-
----
-
 ### 📩 Contato
 
-Para mais informações, entre em contato através de EMAIL@EMAIL.COM.
-
----
-
-Este README oferece uma visão geral e um ponto de partida para aqueles interessados em aprofundar seus conhecimentos em Java e tecnologias associadas, através de um programa de reskilling prático e aplicado.
+Para mais informações, entre em contato através de eherique@minsait.com
