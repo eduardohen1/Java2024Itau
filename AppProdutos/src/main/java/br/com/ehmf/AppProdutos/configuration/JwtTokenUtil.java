@@ -33,6 +33,7 @@ public class JwtTokenUtil {
 				.compact();		
 	}
 	
+	//validar o token
 	public boolean validateToken(String token) {
 		try {
 			byte[] apiKeySecretByte = Base64.getEncoder().encode(secret.getBytes());
@@ -47,6 +48,19 @@ public class JwtTokenUtil {
 		}
 	}
 	
-	//validar o token
+	//Pegar o username do token:
+	public String getUsernameFromToken(String token) {
+		try {
+			byte[] apiKeySecretByte = Base64.getEncoder().encode(secret.getBytes());
+			Key secretKey = Keys.hmacShaKeyFor(apiKeySecretByte);
+			
+			Jws<Claims> claims = Jwts.parser().setSigningKey(apiKeySecretByte)
+					.parseClaimsJws(token);	//quebrei token em objetos
+			return claims.getBody().getSubject();
+			
+		} catch (Exception e) {
+			return "";
+		}
+	}
 	
 }
