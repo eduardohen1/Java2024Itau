@@ -28,13 +28,7 @@
     <fullyQualifiedTypeName name="javax.swing.JComboBox.KeySelectionManager"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.query.KeysetScrollDelegate"/>
     <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.security.core.authority.SimpleGrantedAuthority"/>
-    <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
-    <fullyQualifiedTypeName name="org.springframework.security.authentication.UsernamePasswordAuthenticationToken"/>
-    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
     <fullyQualifiedTypeName name="springfox.documentation.spring.web.plugins.Docket"/>
-    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.security.SecurityRequirement"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
@@ -55,9 +49,15 @@
     <fullyQualifiedTypeName name="io.jsonwebtoken.Jws"/>
     <fullyQualifiedTypeName name="io.jsonwebtoken.Claims"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="br.com.ehmf.AppProdutos.configuration.JwtTokenUtil"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="br.com.ehmf.AppProdutos.configuration.JwtTokenUtil"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.authority.SimpleGrantedAuthority"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
+    <fullyQualifiedTypeName name="org.springframework.security.authentication.UsernamePasswordAuthenticationToken"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
+    <fullyQualifiedTypeName name="io.swagger.v3.oas.models.security.SecurityRequirement"/>
 </qualifiedTypeNameHistroy>
